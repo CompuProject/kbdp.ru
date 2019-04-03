@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+/.idea/
+/bitrix/*
+/upload/*
+!/bitrix/templates/aspro-allcorp2/*
+!/bitrix/modules/aspro.allcorp2/*
+!/bitrix/php_interface/*
+!/bitrix/components/aspro/*
