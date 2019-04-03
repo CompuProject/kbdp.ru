@@ -1,0 +1,173 @@
+2019-02-27 14:04:06 -  - exec CUpdateClientPartner::SearchModulesEx
+2019-02-27 14:04:06 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:06 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN&search_module_id=&search_module=&search_category=7%2C14&search_type=&search_order=DESC&search_order_by=SORT&search_page=1&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:06 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:08 -  - TIME SearchModulesEx(request) 2.183 sec
+2019-02-27 14:04:08 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:42 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:42 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:42 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:42 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:43 -  - TIME LoadModulesUpdates(request) 0.303 sec
+2019-02-27 14:04:43 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:43 - S - STEP
+2019-02-27 14:04:43 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:43 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:43 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:43 -  - loadFile
+2019-02-27 14:04:47 - U - RETURN
+2019-02-27 14:04:47 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:48 -  - TIME UnGzipArchive 1.223 sec
+2019-02-27 14:04:50 -  - TIME UpdateStepModules 1.247 sec
+2019-02-27 14:04:50 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:50 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:50 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.0.0%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:50 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:50 -  - TIME LoadModulesUpdates(request) 0.31 sec
+2019-02-27 14:04:50 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:50 - S - STEP
+2019-02-27 14:04:50 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:50 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:50 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:50 -  - loadFile
+2019-02-27 14:04:51 - U - RETURN
+2019-02-27 14:04:51 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:51 -  - TIME UnGzipArchive 0.039 sec
+2019-02-27 14:04:51 - CSURUS1 - Run updater '/bitrix/updates/update_m1551265491/aspro.allcorp2/updater1.0.1.php'
+2019-02-27 14:04:51 -  - TIME UpdateStepModules 0.186 sec
+2019-02-27 14:04:51 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:51 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:51 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.0.1%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:51 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:52 -  - TIME LoadModulesUpdates(request) 0.402 sec
+2019-02-27 14:04:52 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:52 - S - STEP
+2019-02-27 14:04:52 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:52 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:52 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:52 -  - loadFile
+2019-02-27 14:04:52 - U - RETURN
+2019-02-27 14:04:52 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:52 -  - TIME UnGzipArchive 0.055 sec
+2019-02-27 14:04:52 - CSURUS1 - Run updater '/bitrix/updates/update_m1551265492/aspro.allcorp2/updater1.0.2.php'
+2019-02-27 14:04:52 -  - TIME UpdateStepModules 0.202 sec
+2019-02-27 14:04:53 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:53 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:53 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.0.2%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:53 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:53 -  - TIME LoadModulesUpdates(request) 0.365 sec
+2019-02-27 14:04:53 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:53 - S - STEP
+2019-02-27 14:04:53 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:53 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:53 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:53 -  - loadFile
+2019-02-27 14:04:54 - U - RETURN
+2019-02-27 14:04:54 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:54 -  - TIME UnGzipArchive 0.048 sec
+2019-02-27 14:04:54 - CSURUS1 - Run updater '/bitrix/updates/update_m1551265494/aspro.allcorp2/updater1.0.3.php'
+2019-02-27 14:04:54 -  - TIME UpdateStepModules 0.188 sec
+2019-02-27 14:04:54 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:54 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:54 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.0.3%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:54 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:55 -  - TIME LoadModulesUpdates(request) 0.397 sec
+2019-02-27 14:04:55 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:55 - S - STEP
+2019-02-27 14:04:55 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:55 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:55 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:55 -  - loadFile
+2019-02-27 14:04:56 - U - RETURN
+2019-02-27 14:04:56 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:56 -  - TIME UnGzipArchive 0.083 sec
+2019-02-27 14:04:56 - CSURUS1 - Run updater '/bitrix/updates/update_m1551265496/aspro.allcorp2/updater1.1.0.php'
+2019-02-27 14:04:56 -  - TIME UpdateStepModules 0.309 sec
+2019-02-27 14:04:56 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:56 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:56 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.0%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:56 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:56 -  - TIME LoadModulesUpdates(request) 0.371 sec
+2019-02-27 14:04:56 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:56 - S - STEP
+2019-02-27 14:04:56 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:57 -  - loadFile
+2019-02-27 14:04:57 - U - RETURN
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:57 -  - TIME UnGzipArchive 0.01 sec
+2019-02-27 14:04:57 - CSURUS1 - Run updater '/bitrix/updates/update_m1551265497/aspro.allcorp2/updater1.1.1.php'
+2019-02-27 14:04:57 -  - TIME UpdateStepModules 0.102 sec
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:57 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.1%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:57 -  - TIME LoadModulesUpdates(request) 0.356 sec
+2019-02-27 14:04:57 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:57 - S - STEP
+2019-02-27 14:04:57 - LM4W01 - loadModule4Wizard-Step
+2019-02-27 14:04:58 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:58 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:58 -  - loadFile
+2019-02-27 14:04:58 - U - RETURN
+2019-02-27 14:04:58 -  - exec CUpdateClientPartner::UnGzipArchive
+2019-02-27 14:04:58 -  - TIME UnGzipArchive 0.034 sec
+2019-02-27 14:04:58 - CSURUS1 - Run updater '/bitrix/updates/update_m1551265498/aspro.allcorp2/updater1.1.2.php'
+2019-02-27 14:04:58 -  - TIME UpdateStepModules 0.144 sec
+2019-02-27 14:04:59 -  - exec CUpdateClientPartner::LoadModulesUpdates
+2019-02-27 14:04:59 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:04:59 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.2%2CN&reqm=aspro.allcorp2&lim=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:04:59 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:04:59 -  - TIME LoadModulesUpdates(request) 0.32 sec
+2019-02-27 14:04:59 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:04:59 - STEP - Finish - NOUPDATES
+2019-02-27 14:04:59 - LM4W03 - Finish - NOUPDATES
+2019-02-27 14:08:20 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:08:20 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::GetUpdatesList
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:08:21 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.2%2CN&reqm=bitrix.siteinfoportal%2Cbitrix.sitecorporate%2Cbitrix.sitepersonal%2Caspro.allcorp2&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:08:21 -  - TIME GetUpdatesList(request) 0.324 sec
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:08:21 -  - exec CUpdateClientPartner::ParseServerData
+2019-02-27 14:08:38 -  - exec CUpdateClientPartner::GetUpdatesList
+2019-02-27 14:08:38 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-02-27 14:08:38 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.2%2CN&reqm=aspro.allcorp2&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-02-27 14:08:38 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-02-27 14:08:38 -  - TIME GetUpdatesList(request) 0.408 sec
+2019-02-27 14:08:38 -  - exec CUpdateClientPartner::ParseServerData
+2019-03-21 10:07:56 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-03-21 10:07:56 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-03-21 10:07:56 -  - exec CUpdateClientPartner::ParseServerData
+2019-03-21 10:07:56 -  - exec CUpdateClientPartner::GetUpdatesList
+2019-03-21 10:07:56 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-03-21 10:07:56 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.2%2CN&reqm=bitrix.siteinfoportal%2Cbitrix.sitecorporate%2Cbitrix.sitepersonal%2Caspro.allcorp2&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-03-21 10:07:56 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-03-21 10:07:57 -  - TIME GetUpdatesList(request) 0.371 sec
+2019-03-21 10:07:57 -  - exec CUpdateClientPartner::ParseServerData
+2019-03-21 10:07:57 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-03-21 10:07:57 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-03-21 10:07:57 -  - exec CUpdateClientPartner::ParseServerData
+2019-03-21 10:07:58 -  - exec CUpdateClientPartner::GetUpdatesList
+2019-03-21 10:07:58 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-03-21 10:07:58 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=1&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.2%2CN&reqm=aspro.allcorp2&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-03-21 10:07:58 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-03-21 10:07:59 -  - TIME GetUpdatesList(request) 0.322 sec
+2019-03-21 10:07:59 -  - exec CUpdateClientPartner::ParseServerData
+2019-04-03 16:34:53 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-04-03 16:34:53 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-04-03 16:34:53 -  - exec CUpdateClientPartner::ParseServerData
+2019-04-03 16:34:53 -  - exec CUpdateClientPartner::GetUpdatesList
+2019-04-03 16:34:53 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-04-03 16:34:53 -  - utf=Y&lang=ru&stable=Y&CANGZIP=Y&SUPD_DBS=MYSQL&XE=N&CLIENT_SITE=kbdp.ru&LICENSE_KEY=X&SUPD_STS=1&SUPD_URS=0&SUPD_URSA=2&TYPENC=F&CLIENT_PHPVER=7.1.18&NGINX=Y&dbv=5.7.23&instm=main%2C18.1.5%2CN%3Bfileman%2C18.0.4%2CN%3Biblock%2C18.5.4%2CN%3Bsecurity%2C18.5.0%2CN%3Bforum%2C18.0.3%2CN%3Bclouds%2C18.0.0%2CN%3Bb24connector%2C18.0.0%2CN%3Bbitrixcloud%2C18.5.0%2CN%3Brest%2C18.5.2%2CN%3Bscale%2C17.5.0%2CN%3Bperfmon%2C18.5.0%2CN%3Bphotogallery%2C18.0.0%2CN%3Bbitrix.siteinfoportal%2C15.5.0%2CN%3Bsubscribe%2C18.5.0%2CN%3Btranslate%2C16.5.0%2CN%3Bsearch%2C18.5.0%2CN%3Bui%2C18.0.3%2CN%3Blanding%2C18.5.9%2CN%3Bform%2C18.0.0%2CN%3Bblog%2C18.1.0%2CN%3Bmessageservice%2C18.0.0%2CN%3Bhighloadblock%2C18.5.0%2CN%3Bbitrix.sitecorporate%2C15.5.0%2CN%3Bmobileapp%2C18.0.2%2CN%3Bseo%2C18.5.0%2CN%3Bcompression%2C16.0.0%2CN%3Bsocialservices%2C18.0.3%2CN%3Bbitrix.sitepersonal%2C15.5.0%2CN%3Bvote%2C17.5.1%2CN%3Baspro.allcorp2%2C1.1.2%2CN&reqm=bitrix.siteinfoportal%2Cbitrix.sitecorporate%2Cbitrix.sitepersonal%2Caspro.allcorp2&fullmoduleinfo=Y&SUPD_SRS=RU&SUPD_CMP=N
+2019-04-03 16:34:53 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-04-03 16:34:54 -  - TIME GetUpdatesList(request) 0.309 sec
+2019-04-03 16:34:54 -  - exec CUpdateClientPartner::ParseServerData
+2019-04-03 16:34:54 -  - exec CUpdateClientPartner::__CollectRequestData
+2019-04-03 16:34:54 -  - exec CUpdateClientPartner::GetHTTPPage
+2019-04-03 16:34:54 -  - exec CUpdateClientPartner::ParseServerData

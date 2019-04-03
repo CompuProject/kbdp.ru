@@ -1,0 +1,29 @@
+$(document).ready(function(){
+	setBasketItemsClasses();
+
+	$('.catalog.item-views.table.catalog_table_2 .item .title').sliceHeight();
+	$('.catalog.item-views.table .item .cont').sliceHeight({autoHeightBlock: '.cont_inner', classNull: '.props_wrapper'});
+	$('.catalog.item-views.table.catalog_table_2 .item .slice_price').sliceHeight();
+	$('.catalog.item-views.table.catalog_table_2 .item').sliceHeight({classNull: '.footer-button', autoHeightBlock: '.cont_inner', callback: setHoverHeight});
+})
+
+setHoverHeight = function(el){
+	$('.catalog_table_2 .item').each(function(){
+		var _this = $(this),
+			price_pos = _this.find('.inner-wrap > .text > .foot').position(),
+			top_wrapper_padding = parseInt(_this.find('.inner-wrap').css('padding-top')),
+			top_container_padding = parseInt(_this.find('.inner-wrap > .text').css('padding-top'));
+		_this.parent().addClass('sliced');
+		_this.addClass('sliced');
+		_this.find('.cont_inner').height(price_pos.top-top_wrapper_padding);
+
+		//custom scroll
+		// _this.find('.props_inner').mCustomScrollbar();
+	})
+}
+
+BX.addCustomEvent('onWindowResize', function(eventdata) {
+	ignoreResize.push(true);
+	setHoverHeight();
+	ignoreResize.pop();
+});

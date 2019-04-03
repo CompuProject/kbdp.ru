@@ -1,0 +1,74 @@
+<?
+AddEventHandler('main', 'OnBuildGlobalMenu', 'OnBuildGlobalMenuHandlerAllcorp2');
+function OnBuildGlobalMenuHandlerAllcorp2(&$arGlobalMenu, &$arModuleMenu){
+	if(!defined('ALLCORP2_MENU_INCLUDED')){
+		define('ALLCORP2_MENU_INCLUDED', true);
+
+		IncludeModuleLangFile(__FILE__);
+		$moduleID = 'aspro.allcorp2';
+
+		$GLOBALS['APPLICATION']->SetAdditionalCss("/bitrix/css/".$moduleID."/menu.css");
+
+		if($GLOBALS['APPLICATION']->GetGroupRight($moduleID) >= 'R'){
+			$arMenu = array(
+				'menu_id' => 'global_menu_aspro_allcorp2',
+				'text' => GetMessage('ALLCORP2_GLOBAL_MENU_TEXT'),
+				'title' => GetMessage('ALLCORP2_GLOBAL_MENU_TITLE'),
+				'sort' => 1000,
+				'items_id' => 'global_menu_aspro_allcorp2_items',
+				'items' => array(
+					array(
+						'text' => GetMessage('ALLCORP2_MENU_CONTROL_CENTER_TEXT'),
+						'title' => GetMessage('ALLCORP2_MENU_CONTROL_CENTER_TITLE'),
+						'sort' => 10,
+						'url' => '/bitrix/admin/'.$moduleID.'_mc.php',
+						'icon' => 'imi_control_center',
+						'page_icon' => 'pi_control_center',
+						'items_id' => 'control_center',
+					),
+					array(
+						'text' => GetMessage('ALLCORP2_MENU_TYPOGRAPHY_TEXT'),
+						'title' => GetMessage('ALLCORP2_MENU_TYPOGRAPHY_TITLE'),
+						'sort' => 20,
+						'url' => '/bitrix/admin/'.$moduleID.'_options.php?mid=main',
+						'icon' => 'imi_typography',
+						'page_icon' => 'pi_typography',
+						'items_id' => 'main',
+					),
+					array(
+						'text' => GetMessage('ALLCORP2_MENU_CRM_TEXT'),
+						'title' => GetMessage('ALLCORP2_MENU_CRM_TITLE'),
+						'sort' => 20,
+						'url' => '/bitrix/admin/'.$moduleID.'_crm_amo.php?mid=main',
+						'icon' => 'imi_marketing',
+						'page_icon' => 'pi_typography',
+						'items_id' => 'gfiles',
+						"items" => array(
+							array(
+								'text' => GetMessage('ALLCORP2_MENU_AMO_CRM_TEXT'),
+								'title' => GetMessage('ALLCORP2_MENU_AMO_CRM_TITLE'),
+								'sort' => 20,
+								'url' => '/bitrix/admin/'.$moduleID.'_crm_amo.php?mid=main',
+								'icon' => '',
+								'page_icon' => 'pi_typography',
+								'items_id' => 'grobots',
+							),
+							array(
+								'text' => GetMessage('ALLCORP2_MENU_FLOWLU_CRM_TEXT'),
+								'title' => GetMessage('ALLCORP2_MENU_FLOWLU_CRM_TITLE'),
+								'sort' => 20,
+								'url' => '/bitrix/admin/'.$moduleID.'_crm_flowlu.php?mid=main',
+								'icon' => '',
+								'page_icon' => 'pi_typography',
+								'items_id' => 'gsitemap',
+							),	
+						)
+					),
+				),
+			);
+
+			$arGlobalMenu[] = $arMenu;
+		}
+	}
+}
+?>

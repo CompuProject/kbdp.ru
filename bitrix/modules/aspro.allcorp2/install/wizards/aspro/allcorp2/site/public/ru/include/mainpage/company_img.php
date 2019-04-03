@@ -1,0 +1,1 @@
+<img alt="person" src="#SITE_DIR#images/company/person.jpg" title="person">

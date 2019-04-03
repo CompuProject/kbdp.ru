@@ -1,0 +1,258 @@
+<?
+if(!defined('ALLCORP2_MODULE_ID'))
+	define('ALLCORP2_MODULE_ID', 'aspro.allcorp2');
+
+use \Bitrix\Main\Localization\Loc,
+	Bitrix\Main\Application,
+	\Bitrix\Main\Config\Option,
+	Bitrix\Main\IO\File,
+	Bitrix\Main\Page\Asset;
+Loc::loadMessages(__FILE__);
+
+class CAllcorp2Events{
+	const MODULE_ID = ALLCORP2_MODULE_ID;
+
+	function OnBeforeUserUpdateHandler(&$arFields){
+		$bTmpUser = false;
+
+		if(strlen($arFields['NAME']))
+			$arFields['NAME'] = trim($arFields['NAME']);
+
+		if(strlen($arFields['NAME']) && !strlen($arFields['LAST_NAME']) && !strlen($arFields['SECOND_NAME']))
+		{
+			$siteID = SITE_ID;
+			if($siteID == 'ru')
+				$siteID = 's1';
+			if(defined('ADMIN_SECTION') && ADMIN_SECTION === true)
+				$bOneFIO = COption::GetOptionString(ALLCORP2_MODULE_ID, 'PERSONAL_ONEFIO', 'Y', $siteID);
+			else{
+				$arFrontParametrs = CAllcorp2::GetFrontParametrsValues($siteID);
+				$bOneFIO = $arFrontParametrs['PERSONAL_ONEFIO'] !== 'N';
+			}
+
+			if($bOneFIO)
+			{
+				$arName = explode(' ', $arFields['NAME']);
+				if($arName)
+				{
+					$arFields['NAME'] = '';
+					$arFields['SECOND_NAME'] = '';
+					foreach($arName as $i => $name)
+					{
+						if(!$i)
+						{
+							$arFields['LAST_NAME'] = $name;
+						}
+						else
+						{
+							if(!strlen($arFields['NAME']))
+								$arFields['NAME'] = $name;
+
+							elseif(!strlen($arFields['SECOND_NAME']))
+								$arFields['SECOND_NAME'] = $name;
+
+						}
+					}
+				}
+			}
+		}
+
+		if ($bTmpUser)
+			unset($GLOBALS["USER"]);
+
+		return $arFields;
+	}
+
+	static function OnAfterUserRegisterHandler($arFields){
+
+	}
+
+	static function OnEndBufferContentHandler(&$content)
+	{
+		if(!defined('ADMIN_SECTION'))
+		{
+			if(defined('ASPRO_USE_ONENDBUFFERCONTENT_HANDLER') && ASPRO_USE_ONENDBUFFERCONTENT_HANDLER == 'Y')
+			{
+				global $SECTION_BNR_CONTENT;
+				if($SECTION_BNR_CONTENT)
+				{
+					$start = strpos($content, '<!--title_content-->');
+					if($start>0)
+					{
+						$end = strpos($content, '<!--end-title_content-->');
+
+						if(($end>0) && ($end>$start))
+						{
+							if(defined("BX_UTF") && BX_UTF === true)
+								$content = CAllcorp2::utf8_substr_replace($content, "", $start, $end-$start);
+							else
+								$content = substr_replace($content, "", $start, $end-$start);
+						}
+					}
+					$content = str_replace("body class=\"", "body class=\"with_banners ", $content);
+				}
+			}
+
+			//process recaptcha
+			if(\Aspro\Functions\CAsproAllcorp2ReCaptcha::checkRecaptchaActive())
+			{
+				$count = 0;
+				$contentReplace = preg_replace_callback(
+					'!(<img\s[^>]*?src[^>]*?=[^>]*?)(\/bitrix\/tools\/captcha\.php\?(captcha_code|captcha_sid)=[0-9a-z]+)([^>]*?>)!',
+					function ($arImage)
+					{
+						//replace src and style
+						$arImage = array(
+							'tag' => $arImage[1],
+							'src' => $arImage[2],
+							'tail' => $arImage[4],
+						);
+
+						return \Aspro\Functions\CAsproAllcorp2ReCaptcha::callbackReplaceImage($arImage);
+					},
+					$content,
+					-1,
+					$count
+				);
+
+				if($count <= 0 || !$contentReplace)
+					return;
+				
+				$content = $contentReplace;
+				unset($contentReplace);
+
+				$captcha_public_key = \Aspro\Functions\CAsproAllcorp2ReCaptcha::getPublicKey();
+
+				$ind = 0;
+				while ($ind++ <= $count)
+				{
+					$uniqueId = randString(4);
+					$content = preg_replace(
+						'!<input\s[^>]*?name[^>]*?=[^>]*?captcha_word[^>]*?>!',
+						"<div id='recaptcha-$uniqueId'
+						class='g-recaptcha'
+						data-sitekey='$captcha_public_key'></div>
+					<script type='text/javascript' data-skip-moving='true'>
+						if(typeof renderRecaptchaById !== 'undefined')
+							renderRecaptchaById('recaptcha-$uniqueId');
+					</script>", $content, 1
+					);
+				}
+
+				$arSearchMessages = array(
+					Loc::getMessage('FORM_CAPRCHE_TITLE_RECAPTCHA'),
+					Loc::getMessage('FORM_CAPRCHE_TITLE_RECAPTCHA2'),
+					Loc::getMessage('FORM_CAPRCHE_TITLE_RECAPTCHA3')
+				);
+
+				$content = str_replace($arSearchMessages, Loc::getMessage('FORM_GENERAL_RECAPTCHA'), $content);
+			}
+		}
+	}
+
+	static function onBeforeResultAddHandler($WEB_FORM_ID, &$arFields, &$arrVALUES){
+		if(!defined('ADMIN_SECTION'))
+		{
+			global $APPLICATION;
+			$arTheme = CAllcorp2::GetFrontParametrsValues(SITE_ID);
+
+			if($arrVALUES['nspm'] && !isset($arrVALUES['captcha_sid']))
+		    	$APPLICATION->ThrowException(Loc::getMessage('ERROR_FORM_CAPTCHA'));
+
+		  	if($arTheme['SHOW_LICENCE'] == 'Y' && ((!isset($arrVALUES['licenses_popup']) || !$arrVALUES['licenses_popup']) && (!isset($arrVALUES['licenses_inline']) || !$arrVALUES['licenses_inline'])))
+		    	$APPLICATION->ThrowException(Loc::getMessage('ERROR_FORM_LICENSE'));
+		}
+	}
+
+	public static function OnPageStartHandler(){
+		
+		if(defined("ADMIN_SECTION") || !\Aspro\Functions\CAsproAllcorp2ReCaptcha::checkRecaptchaActive())
+			return;
+
+		$captcha_public_key = \Aspro\Functions\CAsproAllcorp2ReCaptcha::getPublicKey();
+		$assets = Asset::getInstance();
+
+		$arCaptchaProp = array();
+		$arCaptchaProp['recaptchaColor'] = strtolower(Option::get(self::MODULE_ID, 'GOOGLE_RECAPTCHA_COLOR', 'LIGHT'));
+		$arCaptchaProp['recaptchaLogoShow'] = strtolower(Option::get(self::MODULE_ID, 'GOOGLE_RECAPTCHA_SHOW_LOGO', 'Y'));
+		$arCaptchaProp['recaptchaSize'] = strtolower(Option::get(self::MODULE_ID, 'GOOGLE_RECAPTCHA_SIZE', 'NORMAL'));
+		$arCaptchaProp['recaptchaBadge'] = strtolower(Option::get(self::MODULE_ID, 'GOOGLE_RECAPTCHA_BADGE', 'BOTTOMRIGHT'));
+		$arCaptchaProp['recaptchaLang'] = LANGUAGE_ID;
+
+		//add global object asproRecaptcha
+		$scripts = "<script type='text/javascript' data-skip-moving='true'>";
+		$scripts .= "window['asproRecaptcha'] = {params: ".\CUtil::PhpToJsObject($arCaptchaProp).",key: '".$captcha_public_key."'};";
+		$scripts .= "</script>";
+		$assets->addString($scripts);
+
+		//add scripts
+		$scriptsDir = $_SERVER['DOCUMENT_ROOT'].'/bitrix/js/'.self::MODULE_ID.'/captcha/';
+		$scriptsPath = File::isFileExists($scriptsDir.'recaptcha.min.js')? $scriptsDir.'recaptcha.min.js' : $scriptsDir.'recaptcha.js';
+		$scriptCode = File::getFileContents($scriptsPath);
+		$scripts = "<script type='text/javascript' data-skip-moving='true'>".$scriptCode."</script>";
+		$assets->addString($scripts);
+
+		$scriptsPath = File::isFileExists($scriptsDir . 'replacescript.min.js') ? $scriptsDir . 'replacescript.min.js' : $scriptsDir . 'replacescript.js';
+		$scriptCode = File::getFileContents($scriptsPath);
+		$scripts = "<script type='text/javascript' data-skip-moving='true'>".$scriptCode."</script>";
+		$assets->addString($scripts);
+
+		//process post request
+		$application = Application::getInstance();
+		$request = $application->getContext()->getRequest();
+		$arPostData = $request->getPostList()->toArray();
+
+		$needReInit = false;
+
+		if($arPostData['g-recaptcha-response'])
+		{
+			if($code = \Aspro\Functions\CAsproAllcorp2ReCaptcha::getCodeByPostList($arPostData))
+			{
+				$_REQUEST['captcha_word'] = $_POST['captcha_word'] = $code;
+				$needReInit = true;
+			}
+		}
+
+		foreach($arPostData as $key => $arPost)
+		{
+			if(!is_array($arPost) || !$arPost['g-recaptcha-response'])
+				continue;
+
+			if($code = \Aspro\Functions\CAsproAllcorp2ReCaptcha::getCodeByPostList($arPost))
+			{
+				$_REQUEST[$key]['captcha_word'] = $_POST[$key]['captcha_word'] = $code;
+				$needReInit = true;
+			}
+		}
+		if($needReInit)
+		{
+			\Aspro\Functions\CAsproAllcorp2ReCaptcha::reInitContext($application, $request);
+		}
+	}
+
+	static function OnBeforePrologHandler(){
+
+	}
+
+	static function OnBeforeSubscriptionAddHandler(&$arFields){
+		if(!defined('ADMIN_SECTION'))
+		{
+			global $APPLICATION;
+			$arTheme = CAllcorp2::GetFrontParametrsValues(SITE_ID);
+
+			if($arTheme['SHOW_LICENCE'] == 'Y' && !isset($_REQUEST['licenses_subscribe']))
+			{
+				$APPLICATION->ThrowException(\Bitrix\Main\Localization\Loc::getMessage('ERROR_FORM_LICENSE'));
+				return false;
+			}
+		}
+	}
+
+	static function onAfterResultAddHandler($WEB_FORM_ID, $RESULT_ID){
+		if(Option::get(self::MODULE_ID, 'AUTOMATE_SEND_FLOWLU', 'Y') == 'Y')
+		{
+			\Aspro\Functions\CAsproAllcorp2::sendLeadCrmFromForm($WEB_FORM_ID, $RESULT_ID);
+		}
+	}
+}
+?>
