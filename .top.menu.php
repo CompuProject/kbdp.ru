@@ -1,50 +1,29 @@
 <?
 $aMenuLinks = Array(
+    Array(
+        "Услуги",
+        "/services/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Проекты",
+        "/projects/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Блог",
+        "/news/",
+        Array(),
+        Array(),
+        ""
+    ),
 	Array(
 		"Компания", 
 		"/company/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Каталог", 
-		"/product/", 
-		Array(), 
-		Array("WIDE_MENU"=>"Y"), 
-		"" 
-	),
-	Array(
-		"Услуги", 
-		"/services/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Проекты", 
-		"/projects/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Курсы", 
-		"/timetable/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Цены", 
-		"/price/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Информация", 
-		"/info/", 
 		Array(), 
 		Array(), 
 		"" 

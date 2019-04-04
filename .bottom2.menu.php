@@ -1,11 +1,11 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Каталог", 
-		"/product/", 
-		Array(), 
-		Array(), 
-		"" 
+		"Услуги",
+		"/services/",
+		Array(),
+		Array(),
+		""
 	)
 );?>
 
