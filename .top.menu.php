@@ -7,13 +7,13 @@ $aMenuLinks = Array(
         Array(),
         ""
     ),
-    Array(
-        "Проекты",
-        "/projects/",
-        Array(),
-        Array(),
-        ""
-    ),
+//    Array(
+//        "Проекты",
+//        "/projects/",
+//        Array(),
+//        Array(),
+//        ""
+//    ),
     Array(
         "Блог",
         "/news/",

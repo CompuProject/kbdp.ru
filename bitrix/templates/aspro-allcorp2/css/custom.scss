@@ -1,0 +1,228 @@
+$corpColor1: #0088cc;
+$corpColor2: rgba(29, 124, 170, 0.3);
+
+.detail.news {
+
+  /* Детальная картинка */
+  & .detailimage img {
+    width: 100%;
+  }
+
+  /* картинки */
+  & img {
+    width: 70%;
+    box-shadow: 0 0 10px 5px #ddd;
+    border: 1px solid #ccc;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    &.img-big{
+      width: 100%;
+    }
+    &.img-medium{
+      width: 70%;
+    }
+    &.img-small{
+      width: 50%;
+    }
+    &.img-extra-small{
+      width: 30%;
+    }
+  }
+
+  & .content {
+
+
+    /* абзацы в списках */
+    & li p {
+      margin: 0;
+    }
+
+    /* сслыки */
+    & a {
+      text-decoration: none;
+      border-bottom: 1px solid #b5b5b5;
+      &:hover {
+        color: #d10d0d;
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    /* кнопка-ссылка */
+    & .button-url {
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid $corpColor2;
+      text-align: center;
+      padding: 1em;
+      &.block, &.center {
+        display: block;
+        margin: 0 auto;
+      }
+      &.center {
+        width: 25%;
+      }
+      &:hover {
+        color: #fff;
+        background-color: $corpColor2;
+      }
+    }
+
+    /* спсики */
+    & ol, ul {
+      padding-left: 40px;
+    }
+    & ol.circle {
+      counter-reset: myCounter;
+      & li:before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        color: $corpColor1;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: -44px;
+        line-height: 24px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        font-weight: 700;
+        font-size: 15px;
+        border: 2px solid $corpColor1;
+        border-radius: 50%;
+      }
+    }
+
+    /* Таблицы */
+    & table {
+      border-collapse: collapse;
+      background: #fff;
+      width: 100%;
+      margin: 0 auto 1em;
+      position: relative;
+      & caption {
+        text-align: right;
+        font-size: 18px;
+        color: $corpColor1;
+        font-weight: 700;
+        padding: .5em 0
+      }
+      & td, & th {
+        line-height: 1.2;
+        font-weight: unset;
+        padding: 1em;
+        &.center {
+          text-align: center
+        }
+      }
+      & th {
+        font-size: 18px;
+        background: $corpColor1;
+        color: #fff;
+        border: 1px solid $corpColor1;
+      }
+      & td {
+        font-size: 15px;
+        color: grey;
+        border: 1px solid #bdbdbd;
+      }
+      & tr:nth-child(even) {
+        background-color: #f5f5f5
+      }
+    }
+
+    /* Блок перелинковки */
+    & .rlink {
+      margin: 1em;
+      border-radius: 10px;
+      font-style: italic;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 1em;
+      border-left: solid $corpColor1 5px;
+      background: #f8f9fb;
+    }
+
+    /* рекомендации к чтению */
+    & .tips-read {
+      padding: .5em 1em 1.5em;
+      position: relative;
+      border: 3px solid $corpColor2;
+      & > p {
+        font-weight: 600;
+        font-size: 1.2em;
+      }
+      & ul li {
+        margin: .5em 0 !important;
+      }
+      & ul, & ol {
+        list-style: none;
+        margin-bottom: 10px;
+        margin-top: 0;
+        margin-left: -20px;
+        & li {
+          margin: 15px 0 10px;
+          padding: 0 15px;
+          text-align: left;
+          position: relative;
+          &:before {
+            content: "•";
+            color: $corpColor1;
+            font-size: 15px;
+            line-height: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 20px;
+            padding: 1px 5px 0 0
+          }
+        }
+      }
+      & ul {
+        margin-left: 0;
+      }
+    }
+
+    /* блок для выделения */
+    & .substrate-case {
+      border-left: solid transparent 5px;
+      padding: 1em 1em 1.5em;
+      background: #f8f9fb;
+      &.main {
+        border-left: solid $corpColor1 5px;
+        z-index:1;
+      }
+      &.important {
+        border-left: solid $corpColor1 5px;
+        background: #fff7ae;
+        color: $corpColor1;
+        & li, & p {
+          color: #b16a01 !important
+        }
+      }
+      & > p {
+        margin: 0 1em;
+      }
+      & ol.circle {
+        margin-left: 0
+      }
+    }
+
+    /* финальный блок */
+    & .final {
+      padding: .5em 1em 1.5em;
+      position: relative;
+      border: 3px solid $corpColor1;
+      & h1, & h2, & h3, & h4 {
+        color: $corpColor1;
+        margin-top: 0
+      }
+    }
+
+    /* отключаем вывод ошибок в новостях */
+    & .detail .errortext {
+      display: none !important;
+    }
+  }
+}

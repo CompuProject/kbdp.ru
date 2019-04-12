@@ -1,13 +1,13 @@
 <?
-$aMenuLinks = Array(
-	Array(
-		"Проекты",
-		"/projects/",
-		Array(), 
-		Array(), 
-		"" 
-	)
-);?>
+//$aMenuLinks = Array(
+//	Array(
+//		"Проекты",
+//		"/projects/",
+//		Array(),
+//		Array(),
+//		""
+//	)
+//);?>
 
 
 

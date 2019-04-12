@@ -1,4 +1,170 @@
-/* CSS kod pishite v etom faile, chotobi pri ustanovke obnovlenii ne bilo problem  */
-/* --------------------------------------- */
-/* Here you can put custom css rules for your site */
-
+@charset "UTF-8";
+.detail.news {
+  /* Детальная картинка */
+  /* картинки */ }
+  .detail.news .detailimage img {
+    width: 100%; }
+  .detail.news img {
+    width: 70%;
+    box-shadow: 0 0 10px 5px #ddd;
+    border: 1px solid #ccc;
+    height: auto;
+    margin: 0 auto;
+    display: block; }
+    .detail.news img.img-big {
+      width: 100%; }
+    .detail.news img.img-medium {
+      width: 70%; }
+    .detail.news img.img-small {
+      width: 50%; }
+    .detail.news img.img-extra-small {
+      width: 30%; }
+  .detail.news .content {
+    /* абзацы в списках */
+    /* сслыки */
+    /* кнопка-ссылка */
+    /* спсики */
+    /* Таблицы */
+    /* Блок перелинковки */
+    /* рекомендации к чтению */
+    /* блок для выделения */
+    /* финальный блок */
+    /* отключаем вывод ошибок в новостях */ }
+    .detail.news .content li p {
+      margin: 0; }
+    .detail.news .content a {
+      text-decoration: none;
+      border-bottom: 1px solid #b5b5b5; }
+      .detail.news .content a:hover {
+        color: #d10d0d;
+        border-bottom: 1px solid transparent; }
+    .detail.news .content .button-url {
+      display: inline-block;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid rgba(29, 124, 170, 0.3);
+      text-align: center;
+      padding: 1em; }
+      .detail.news .content .button-url.block, .detail.news .content .button-url.center {
+        display: block;
+        margin: 0 auto; }
+      .detail.news .content .button-url.center {
+        width: 25%; }
+      .detail.news .content .button-url:hover {
+        color: #fff;
+        background-color: rgba(29, 124, 170, 0.3); }
+    .detail.news .content ol, .detail.news .content ul {
+      padding-left: 40px; }
+    .detail.news .content ol.circle {
+      counter-reset: myCounter; }
+      .detail.news .content ol.circle li:before {
+        counter-increment: myCounter;
+        content: counter(myCounter);
+        color: #0088cc;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: -44px;
+        line-height: 24px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        font-weight: 700;
+        font-size: 15px;
+        border: 2px solid #0088cc;
+        border-radius: 50%; }
+    .detail.news .content table {
+      border-collapse: collapse;
+      background: #fff;
+      width: 100%;
+      margin: 0 auto 1em;
+      position: relative; }
+      .detail.news .content table caption {
+        text-align: right;
+        font-size: 18px;
+        color: #0088cc;
+        font-weight: 700;
+        padding: .5em 0; }
+      .detail.news .content table td, .detail.news .content table th {
+        line-height: 1.2;
+        font-weight: unset;
+        padding: 1em; }
+        .detail.news .content table td.center, .detail.news .content table th.center {
+          text-align: center; }
+      .detail.news .content table th {
+        font-size: 18px;
+        background: #0088cc;
+        color: #fff;
+        border: 1px solid #0088cc; }
+      .detail.news .content table td {
+        font-size: 15px;
+        color: grey;
+        border: 1px solid #bdbdbd; }
+      .detail.news .content table tr:nth-child(even) {
+        background-color: #f5f5f5; }
+    .detail.news .content .rlink {
+      margin: 1em;
+      border-radius: 10px;
+      font-style: italic;
+      font-size: 15px;
+      line-height: 15px;
+      padding: 1em;
+      border-left: solid #0088cc 5px;
+      background: #f8f9fb; }
+    .detail.news .content .tips-read {
+      padding: .5em 1em 1.5em;
+      position: relative;
+      border: 3px solid rgba(29, 124, 170, 0.3); }
+      .detail.news .content .tips-read > p {
+        font-weight: 600;
+        font-size: 1.2em; }
+      .detail.news .content .tips-read ul li {
+        margin: .5em 0 !important; }
+      .detail.news .content .tips-read ul, .detail.news .content .tips-read ol {
+        list-style: none;
+        margin-bottom: 10px;
+        margin-top: 0;
+        margin-left: -20px; }
+        .detail.news .content .tips-read ul li, .detail.news .content .tips-read ol li {
+          margin: 15px 0 10px;
+          padding: 0 15px;
+          text-align: left;
+          position: relative; }
+          .detail.news .content .tips-read ul li:before, .detail.news .content .tips-read ol li:before {
+            content: "•";
+            color: #0088cc;
+            font-size: 15px;
+            line-height: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 20px;
+            padding: 1px 5px 0 0; }
+      .detail.news .content .tips-read ul {
+        margin-left: 0; }
+    .detail.news .content .substrate-case {
+      border-left: solid transparent 5px;
+      padding: 1em 1em 1.5em;
+      background: #f8f9fb; }
+      .detail.news .content .substrate-case.main {
+        border-left: solid #0088cc 5px;
+        z-index: 1; }
+      .detail.news .content .substrate-case.important {
+        border-left: solid #0088cc 5px;
+        background: #fff7ae;
+        color: #0088cc; }
+        .detail.news .content .substrate-case.important li, .detail.news .content .substrate-case.important p {
+          color: #b16a01 !important; }
+      .detail.news .content .substrate-case > p {
+        margin: 0 1em; }
+      .detail.news .content .substrate-case ol.circle {
+        margin-left: 0; }
+    .detail.news .content .final {
+      padding: .5em 1em 1.5em;
+      position: relative;
+      border: 3px solid #0088cc; }
+      .detail.news .content .final h1, .detail.news .content .final h2, .detail.news .content .final h3, .detail.news .content .final h4 {
+        color: #0088cc;
+        margin-top: 0; }
+    .detail.news .content .detail .errortext {
+      display: none !important; }
